@@ -355,6 +355,7 @@ body { background-color:#fff; } .hb-custom-header #mk-page-introduce, .mk-header
 		    </div>
 		    <div id="map" style="height: 400px;"></div>
 		    <script type="text/javascript">
+var loc = [13.403040, 52.521915];
 var map = new ol.Map({
 	layers: [
 		new ol.layer.Tile({
@@ -366,7 +367,7 @@ var map = new ol.Map({
 	],
 	target: 'map',
 	view: new ol.View({
-		center: ol.proj.fromLonLat([13.400639416756446, 52.52191527981469]),
+		center: ol.proj.fromLonLat(loc),
 		maxZoom: 18,
 		zoom: 18
 	})
@@ -375,7 +376,7 @@ var pin = new ol.layer.Vector({
 	source: new ol.source.Vector({
 		features: [
 			new ol.Feature({
-				geometry: new ol.geom.Point(ol.proj.fromLonLat([13.400639416756446, 52.52191527981469]))
+				geometry: new ol.geom.Point(ol.proj.fromLonLat(loc))
 			})
 		]
 	}),
